@@ -1,0 +1,56 @@
+﻿<Application x:Class="AdsApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <!-- Цвета по руководству -->
+        <SolidColorBrush x:Key="MainTextBrush" Color="#FF37474F"/>
+        <!-- 55,71,79 -->
+        <SolidColorBrush x:Key="SecondaryTextBrush" Color="#FF78909C"/>
+        <!-- 120,144,156 -->
+        <SolidColorBrush x:Key="AccentBrush" Color="#FFFF9C1A"/>
+        <!-- 255,156,26 -->
+        <SolidColorBrush x:Key="BackgroundBrush" Color="#FFFFFFFF"/>
+        <!-- белый -->
+
+        <!-- Все окна -->
+        <Style TargetType="Window">
+            <!-- Шрифт из методички (поставь его в системе!) -->
+            <Setter Property="FontFamily" Value="Tw Cen MT" />
+            <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
+            <Setter Property="Foreground" Value="{StaticResource MainTextBrush}" />
+        </Style>
+
+        <!-- Текст по умолчанию -->
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource MainTextBrush}" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+
+        <!-- Кнопки -->
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="{StaticResource MainTextBrush}" />
+            <Setter Property="Background" Value="{StaticResource AccentBrush}" />
+            <Setter Property="Padding" Value="10" />
+            <!-- внутренний отступ 10 -->
+            <Setter Property="Margin" Value="0,0,16,0" />
+            <!-- внешний ≥16 -->
+        </Style>
+
+        <!-- Поля ввода -->
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="{StaticResource MainTextBrush}" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Margin" Value="0,0,16,0" />
+        </Style>
+
+        <!-- Комбо-боксы -->
+        <Style TargetType="ComboBox">
+            <Setter Property="Foreground" Value="{StaticResource MainTextBrush}" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Margin" Value="0,0,16,0" />
+        </Style>
+
+    </Application.Resources>
+</Application>

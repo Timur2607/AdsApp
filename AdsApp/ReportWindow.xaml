@@ -1,0 +1,30 @@
+﻿<Window x:Class="AdsApp.ReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Отчёт по прибыли" Height="400" Width="600"
+        WindowStartupLocation="CenterOwner">
+    <DockPanel Margin="10">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="С:" VerticalAlignment="Center"/>
+            <DatePicker x:Name="FromDatePicker" Margin="5,0,10,0"/>
+            <TextBlock Text="По:" VerticalAlignment="Center"/>
+            <DatePicker x:Name="ToDatePicker" Margin="5,0,10,0"/>
+            <Button Content="Рассчитать" Width="100"
+                    Click="CalculateButton_Click"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Общая прибыль: " FontWeight="Bold"/>
+            <TextBlock x:Name="TotalProfitText"/>
+        </StackPanel>
+
+        <DataGrid x:Name="FinishedAdsDataGrid" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding AdId}" Width="60"/>
+                <DataGridTextColumn Header="Заголовок" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Прибыль" Binding="{Binding ProfitAmount}" Width="80"/>
+                <DataGridTextColumn Header="Дата закрытия" Binding="{Binding ClosedAt}" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>

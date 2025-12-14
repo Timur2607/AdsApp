@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="19f86894515b485fafa61b999e4182bc" Name="Diagram1">
+        <EntityTypeShape EntityType="bumModel.Ads" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="bumModel.AdStatuses" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bumModel.AdTypes" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bumModel.Categories" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="bumModel.Cities" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bumModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bumModel.Users" Width="1.5" PointX="0.75" PointY="12.625" IsExpanded="true" />
+        <AssociationConnector Association="bumModel.FK_Ads_AdStatuses" ManuallyRouted="false" />
+        <AssociationConnector Association="bumModel.FK_Ads_AdTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="bumModel.FK_Ads_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="bumModel.FK_Ads_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="bumModel.FK_Ads_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

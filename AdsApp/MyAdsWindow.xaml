@@ -1,0 +1,32 @@
+﻿<Window x:Class="AdsApp.MyAdsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Мои объявления" Height="450" Width="800"
+        WindowStartupLocation="CenterOwner">
+    <DockPanel Margin="10">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock x:Name="UserInfoText" VerticalAlignment="Center" />
+            <Button Content="Добавить" Width="90" Margin="10,0,0,0"
+                    Click="AddButton_Click" />
+            <Button Content="Редактировать" Width="100" Margin="5,0,0,0"
+                    Click="EditButton_Click" />
+            <Button Content="Удалить" Width="90" Margin="5,0,0,0"
+                    Click="DeleteButton_Click" />
+            <Button Content="Назад" Width="80" Margin="5,0,0,0"
+                    Click="BackButton_Click" />
+        </StackPanel>
+
+        <DataGrid x:Name="AdsDataGrid" AutoGenerateColumns="False"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding AdId}" Width="60" />
+                <DataGridTextColumn Header="Заголовок" Binding="{Binding Title}" Width="*" />
+                <DataGridTextColumn Header="Город" Binding="{Binding City.Name}" Width="100" />
+                <DataGridTextColumn Header="Категория" Binding="{Binding Category.Name}" Width="120" />
+                <DataGridTextColumn Header="Статус" Binding="{Binding AdStatus.Name}" Width="90" />
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="80" />
+                <DataGridTextColumn Header="Прибыль" Binding="{Binding ProfitAmount}" Width="80" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
